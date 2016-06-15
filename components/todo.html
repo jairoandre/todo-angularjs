@@ -10,10 +10,10 @@
     <md-button class="md-raised md-primary" ng-click='todoCtrl.addTodo()'>Add</md-button>
     <md-list>
       <md-list-item class='md-1-line' ng-repeat='item in todos' ng-click='todoCtrl.toggle(item)'>
-        <div class='md-list-item-text' ng-class="{'md-offset': true}" style="{{item.completed ? 'text-decoration: line-through; ' : ''}}">
+        <div class='md-list-item-text todo-list-item' ng-class="{'md-offset': true}" style="{{item.completed ? 'text-decoration: line-through; ' : ''}}">
           {{item.text}}
         </div>
-        <confirm label='"REMOVE"' title='"Would you like to remove the task?"' aria-label='"Nothing here"' text-content='"The task [" + item.text + "] will be removed."' ok='"YES"' cancel='"NO"' action='todoCtrl.remove(item)'/>
+        <confirm label='REMOVE' title='Would you like to remove the task?' aria-label='Nothing here' text-content='The task [{{ item.text }}] will be removed.' ok='YES' cancel='NO' action='todoCtrl.remove(item)'/>
       </md-list-item>
     </md-list>    
   </form>

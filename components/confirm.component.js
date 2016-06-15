@@ -6,12 +6,12 @@ let confirmComponent = () => {
     template,
     restrict: 'E',
     scope: {
-      label: '=',
-      title: '=',
-      textContent: '=',
-      ariaLabel: '=',
-      ok: '=',
-      cancel: '=',
+      label: '@',
+      title: '@',
+      textContent: '@',
+      ariaLabel: '@',
+      ok: '@',
+      cancel: '@',
       action: '&'
     },
     controller,

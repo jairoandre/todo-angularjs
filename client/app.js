@@ -4,5 +4,5 @@ import ConfirmComponent from '../components/confirm.component.js';
 require('angular-material');
 
 angular.module('todoApp', ['ngMaterial'])
-.directive('todo', TodoComponent)
-.directive('confirm', ConfirmComponent);
+  .directive('todo', TodoComponent)
+  .directive('confirm', ConfirmComponent);

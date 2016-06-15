@@ -1,3 +1,5 @@
+require('./todo.less');
+
 export default class TodoController {
   constructor ($scope) {
     console.info('TodoController created');

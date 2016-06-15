@@ -1,4 +1,4 @@
-export default class DialogController {
+export default class ConfirmController {
 
   constructor ($scope, $mdDialog) {
     this.show = (ev) => {
