@@ -2,13 +2,13 @@ require('./todo.less');
 
 export default class TodoController {
   constructor ($scope) {
-    console.info('TodoController created');
-
     $scope.todos = [];
     $scope.newTodo = '';
 
     this.addTodo = () => {
-      $scope.todos.push({text: $scope.newTodo, completed: false, index: $scope.todos.length});
+      if ($scope.newTodo.length > 0) {
+        $scope.todos.push({text: $scope.newTodo, completed: false, index: $scope.todos.length});  
+      }
       $scope.newTodo = '';
     };
 

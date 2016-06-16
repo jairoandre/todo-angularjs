@@ -1,22 +1,22 @@
 {
   "name": "todo-angularjs",
   "version": "1.0.0",
-  "description": "TODO list made with angularjs",
+  "description": "TODO list for job apply on SocialBase",
   "main": "index.js",
   "scripts": {
     "start": "set NODE_ENV=production && node server/runner.js",
-    "linux": "NODE_ENV=production node server/runner.js",
-    "build": "webpack --progress --color",
+    "unix": "NODE_ENV=production node server/runner.js",
+    "build": "./node_modules/.bin/webpack --progress --color",
     "prod": "./node_modules/.bin/npm-run-all build start",
     "dev-server": "node server/webpack",
-    "dev-runner": "nodemon server/runner",
+    "dev-runner": "node server/runner",
     "dev": "./node_modules/.bin/npm-run-all --parallel dev-server dev-runner",
-    "test": "karma start",
-    "test:debug": "karma start karma.conf.js --log-level=debug --single-run=False",
-    "test:watch": "karma start karma.conf.js --auto-watch=true --single-run=False"
+    "test": "./node_modules/.bin/karma start",
+    "test:debug": "./node_modules/.bin/karma start karma.conf.js --log-level=debug --single-run=False",
+    "test:watch": "./node_modules/.bin/karma start karma.conf.js --auto-watch=true --single-run=False"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Jairo André",
+  "license": "MIT",
   "dependencies": {
     "angular": "^1.5.6",
     "angular-animate": "^1.5.6",

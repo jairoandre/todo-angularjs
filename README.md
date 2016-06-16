@@ -4,22 +4,24 @@ TODO APP - SocialBase Job Apply
 Stack
 ---
 
+Utilizei as seguintes tecnologias para desenvolver esta aplicação::
+
+- NodeJS
 - NPM
 - Webpack
 - Angular 1.5
+- Angular Material UI
+- LESS
 - ES 6 / Babel (Module Loading)
 - Tests
   - Karma (Test Runner)
   - Mocha (Test Framework)
   - Chai (BDD/TSS assertion library)
 
-Pre requisitos
+Pré requisitos
 ---
 
-Instale algumas dependências globalmente::
-
-$ npm install -g webpack
-$ npm install -g webpack-dev-server
+NodeJS instalado
 
 Scripts
 ---
@@ -28,7 +30,7 @@ Criar bundle JS da aplicação (com webpack)::
 
 $ npm run build
 
-Iniciar aplicação (express server na porta 3000)::
+Iniciar [aplicação](http://localhost:3000)::
 
 $ npm start
 
@@ -44,5 +46,6 @@ Executar testes::
 
 $ npm run test
 
-Estrutura do projeto::
+Iniciar aplicação em ambiente unix (necessário executar script build antes)::
 
+$ npm run unix

@@ -1,20 +1,26 @@
-<md-toolbar md-scroll-shrink>
-    <div class="md-toolbar-tools">TODO LIST</div>
-</md-toolbar>
-<md-content layout-padding>
-  <form name='form'>
-    <md-input-container>
-      <label>What to do?</label>
-      <input ng-model="newTodo">
-    </md-input-container>
-    <md-button class="md-raised md-primary" ng-click='todoCtrl.addTodo()'>Add</md-button>
-    <md-list>
-      <md-list-item class='md-1-line' ng-repeat='item in todos' ng-click='todoCtrl.toggle(item)'>
-        <div class='md-list-item-text todo-list-item' ng-class="{'md-offset': true}" style="{{item.completed ? 'text-decoration: line-through; ' : ''}}">
-          {{item.text}}
-        </div>
-        <confirm label='REMOVE' title='Would you like to remove the task?' aria-label='Nothing here' text-content='The task [{{ item.text }}] will be removed.' ok='YES' cancel='NO' action='todoCtrl.remove(item)'/>
-      </md-list-item>
-    </md-list>    
-  </form>
-</md-content>
+<div style="width: 800px; margin: 0 auto">
+  <md-toolbar md-scroll-shrink>
+      <div class="md-toolbar-tools">TODO LIST</div>
+  </md-toolbar>
+  <md-content layout-padding>
+    <form name='form'>
+      <md-input-container class="md-block">
+        <label>What to do?</label>
+        <input ng-model="newTodo">
+      </md-input-container>
+      <md-button class="md-raised md-primary" ng-click='todoCtrl.addTodo()'>Add</md-button>
+      <md-list>
+        <md-list-item class='md-1-line' ng-repeat='item in todos' ng-click='todoCtrl.toggle(item)'>
+          <div class='md-list-item-text todo-list-item' ng-class="{'md-offset': true}" style="{{item.completed ? 'text-decoration: line-through; ' : ''}}">
+            {{item.text}}
+          </div>
+          <md-button class="md-raised md-secondary" alertmsg label='REMOVE' title='Would you like to remove the task?' 
+            text-content='The task [{{ item.text }}] will be removed.' 
+            ok='YES' cancel='NO' action='todoCtrl.remove(item)'>
+            REMOVER
+          </md-button>
+        </md-list-item>
+      </md-list>    
+    </form>
+  </md-content>
+</div>
