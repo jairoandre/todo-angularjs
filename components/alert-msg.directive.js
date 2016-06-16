@@ -2,7 +2,6 @@ let directive = ($mdDialog) => {
   return {
     link: (scope, elem, attr) => {
       elem.on('mousedown', (ev) => {
-        console.log('teste');
         let confirm = $mdDialog.confirm()
           .title(scope.title)
           .textContent(scope.textContent)
@@ -15,7 +14,7 @@ let directive = ($mdDialog) => {
             scope.action();
           },
           () => {
-            console.log('Nothing');
+            console.log('Cancel delete');
           }
         );
       });
