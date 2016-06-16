@@ -26,26 +26,38 @@ NodeJS instalado
 Scripts
 ---
 
-Criar bundle JS da aplicação (com webpack)::
+Criar bundle JS da aplicação (com webpack):
 
+```bash
 $ npm run build
+```
 
-Iniciar [aplicação](http://localhost:3000)::
+Iniciar [aplicação](http://localhost:3000):
 
+```bash
 $ npm start
+```
 
-Shortcut build + server::
+Shortcut build + server:
 
+```bash
 $ npm run prod
+```
 
-Iniciar ambiente de desenvolvimento com auto reload (webpack dev server na porta 8080)::
+Iniciar ambiente de desenvolvimento com auto reload (webpack dev server na porta 8080):
 
+```bash
 $ npm run dev
+```
 
-Executar testes::
+Executar testes:
 
+```bash
 $ npm run test
+```
 
-Iniciar aplicação em ambiente unix (necessário executar script build antes)::
+Iniciar aplicação em ambiente unix (necessário executar script build antes):
 
+```bash
 $ npm run unix
+```
